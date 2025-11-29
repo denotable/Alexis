@@ -738,8 +738,7 @@ if __name__ == '__main__':
                         print("\033[36mYou don't have any saved quotes yet. Use 'quote save' to save a quote!")
                     else:
                         random_quote = random.choice(saved_quotes)
-                        print(f"\033[36m\n  \"{random_quote['text']}\"")
-                        print(f"\033[36m  - {random_quote['author']}\n")
+                        print(f"\033[36m\"{random_quote['text']}\" - {random_quote['author']}")
 
                 # Quote (default): gets a random quote from API
                 else:
@@ -750,8 +749,7 @@ if __name__ == '__main__':
                             last_quote["text"] = quote_data["text"]
                             last_quote["author"] = quote_data["author"]
                             # Display the quote
-                            print(f"\033[36m\n  \"{quote_data['text']}\"")
-                            print(f"\033[36m  - {quote_data['author']}\n")
+                            print(f"\033[36m\"{quote_data['text']}\" - {quote_data['author']}")
                         else:
                             print(random.choice(resconst.errorResponse))
                     except:
